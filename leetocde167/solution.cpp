@@ -33,7 +33,6 @@ int main(){
     v.push_back(11);
     v.push_back(15);
     int size=v.size();
-    // sort(nums.begin(),nums.end());
     vector<int> ans=twoSum(v,9);
     for(int i=0;i<ans.size();i++){
         cout << ans[i] <<" ";

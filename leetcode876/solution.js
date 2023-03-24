@@ -8,6 +8,42 @@ var middleNode = function(head) {
     return tortoise;
 };
 
+var removeNth = function(head, n) {
+    let current=head;
+    let previous=null;
+    let i=1;
+    while(i<n ){
+        i++;
+        previous=current;
+        current=current.next;
+    }
+    previous.next=current.next;
+    return head;
+};
+
+var removeNthFromLinkedList = function(head, n) {
+    let current = head;
+    let previous = null;
+    let i = 1;
+    while (i < n && current !== null) {
+        i++;
+        previous = current;
+        current = current.next;
+    }
+    if (i < n || current === null) {
+        // n is greater than the length of the linked list
+        return head;
+    }
+    if (previous === null) {
+        // removing the first node
+        head = current.next;
+    } else {
+        previous.next = current.next;
+    }
+    return head;
+};
+
+
 class Node{
     constructor(val,next=null){
         this.val=val;
@@ -28,7 +64,7 @@ n3.next=n4;
 n4.next=n5;
 n5.next=n6;
 
-console.log(middleNode(n1));
+console.log(removeNthFromEnd(n1,2));
 
 
 // hare and tortoise method

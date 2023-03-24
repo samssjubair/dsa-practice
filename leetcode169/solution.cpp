@@ -43,14 +43,14 @@ int majorityElement(vector<int>& v){
     int c=0;
     for(int i=0;i<v.size();i++){
         if(c==0) el=v[i];
-        else{
+        // else{
             if(el==v[i]){
                 c++;
             }
             else{
                 c--;
             }
-        }
+        // }
     }
     return el;
 }

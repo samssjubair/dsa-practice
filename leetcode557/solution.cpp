@@ -23,5 +23,5 @@ int main(){
     string s;
     cin>>s;
     string newS=reverseWord(s);
-    cout<<s.begin()<<endl;
+    cout<<newS<<endl;
 }
