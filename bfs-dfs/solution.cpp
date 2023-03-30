@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<queue>
 using namespace std;
 
 const int N=1e5+2;
@@ -12,6 +13,21 @@ void dfs(int source){
     for(int child : g[source]){
         if(!vis[child]){
             dfs(child);
+        }
+    }
+}
+
+queue<int> q;
+void bfs(int source){
+    q.push(source);
+    vis[source]=true;
+    while(!q.empty()){
+        int node=q.front();
+        q.pop();
+        for(int child: g[node]){
+            vis[child]=true;
+            q.push(child);
+            cout<<child<<" ";
         }
     }
 }
