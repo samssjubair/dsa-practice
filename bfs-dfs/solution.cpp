@@ -17,9 +17,9 @@ void dfs(int source){
 }
 
 int main(){
-    int n;
-    cin>>n;
-    for(int i=0;i<n;i++){
+    int n,m;
+    cin>>n>>m;
+    for(int i=0;i<m;i++){
         int x,y;
         cin>>x>>y;
         g[x].push_back(y);
